@@ -4,7 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"image"
-	_ "image/png"
+	_ "image/png" // png format decoder
 	"io/ioutil"
 	"strings"
 )

@@ -2,11 +2,13 @@ package piskel
 
 import "image"
 
+// Piskel top level data
 type Piskel struct {
-	ModelVersion int        `json:"modelVersion"`
+	ModelVersion int           `json:"modelVersion"`
 	Content      PiskelContent `json:"piskel"`
 }
 
+// PiskelContent piksel sprite data
 type PiskelContent struct {
 	Name        string   `json:"name"`
 	Description string   `json:"description"`
@@ -17,6 +19,7 @@ type PiskelContent struct {
 	Layers      []PiskelLayer
 }
 
+// PiskelLayer layer data
 type PiskelLayer struct {
 	Name       string        `json:"name"`
 	Opacity    float32       `json:"opacity"`
@@ -24,6 +27,7 @@ type PiskelLayer struct {
 	Chunks     []PiskelChunk `json:"chunks"`
 }
 
+// PiskelChunk chunk data
 type PiskelChunk struct {
 	Layout    [][]int `json:"layout"`
 	Base64PNG string  `json:"base64PNG"`
